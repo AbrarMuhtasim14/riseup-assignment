@@ -1,0 +1,19 @@
+Generative AI Usage Declaration
+
+How AI was used:
+
+Code Structuring: AI was used to decompose the environment and agent logic into micro-functions to strictly adhere to the less than or equal to 8 lines per function and no nested ifs coding guidelines.
+
+Mathematical Implementation: AI assisted in drafting the Bellman equation update logic and the epsilon-greedy tie-breaking mechanism.
+
+Debugging and Tuning: AI was used to analyze why the agent was failing 1% of the time (identifying the "wall loop" bug) and to suggest hyperparameter tuning (adjusting gamma to 0.99 and slowing epsilon decay) to handle the expanded 1,250 state space.
+
+What I implemented and own:
+
+System Design: I designed the observation space to include the pickup location to strictly follow the PDF specifications.
+
+Reward Shaping: I designed the reward penalties and step limits to ensure the agent learns the shortest path without hardcoding heuristics.
+
+Testing Methodology: I defined the 100% success rate and less than or equal to 10 steps metrics to validate the greedy policy.
+
+Code Ownership: I have reviewed, tested, and can explain every single line of this code, including the 5D Q-table indexing, the simultaneous state updates, and the mathematical rationale behind the hyperparameter choices.

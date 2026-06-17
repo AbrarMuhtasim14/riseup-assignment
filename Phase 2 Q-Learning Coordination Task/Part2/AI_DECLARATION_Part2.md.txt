@@ -1,0 +1,19 @@
+Generative AI Usage Declaration
+
+How AI was used:
+
+Code Structuring: AI assisted in decomposing the complex simultaneous-step logic into micro-functions to strictly adhere to the less than or equal to 8 lines per function and no nested ifs coding guidelines.
+
+Mathematical Implementation: AI helped draft the specific logic for calculating water damage based on the was_flooded and old_pos variables to strictly match the PDF's semantics.
+
+Debugging and Tuning: AI was used to analyze why the agents were colliding in early epochs and suggested tuning the WAIT_REWARD to be less negative than the STEP_REWARD to encourage waiting behavior.
+
+What I implemented and own:
+
+System Design: I designed the state observation tuple to include the lake's flood status, which is critical for Type A's decision-making.
+
+Reward Shaping: I defined the penalty matrix to ensure the cost of collision or water damage outweighs the cost of waiting, forcing the desired emergent behavior.
+
+Semantics Enforcement: I implemented the strict 6-step simultaneous update loop, ensuring the lake state flips after rewards are calculated, preventing temporal leakage.
+
+Code Ownership: I have reviewed, tested, and can explain every single line of this code, including the 4D Q-table indexing, the simultaneous state updates, and the mathematical rationale behind the hyperparameter choices.
